@@ -26,7 +26,7 @@ public class Appointment {
     @ManyToOne
     @ToString.Exclude
     @JoinColumn(name = "patient_id", nullable = false) // patient is required and not nullable
-    private Patient patient
+    private Patient patient;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @ToString.Exclude
