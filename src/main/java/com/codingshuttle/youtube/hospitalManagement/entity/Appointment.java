@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 public class Appointment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id
 
     @Column(nullable = false)
     private LocalDateTime appointmentTime;
@@ -26,7 +26,7 @@ public class Appointment {
     @ManyToOne
     @ToString.Exclude
     @JoinColumn(name = "patient_id", nullable = false) // patient is required and not nullable
-    private Patient patient;
+    private Patient patient
 
     @ManyToOne(fetch = FetchType.LAZY)
     @ToString.Exclude
